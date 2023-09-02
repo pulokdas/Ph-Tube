@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>phTube Blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <header>
+        <div class="navbar bg-base-100 p-8  flex justify-between">
+            <div><a href="/index.html"><img src="/Logo.png" alt=""></a></div>
+           
+            <div> <button class="btn text-white bg-red-600">Blog</button></div>
+
+        </div>
+        <hr class="px-8">
+    </header>
+    <main>
+        <section class="w-10/12 mx-auto">
+            <h1 class="text-3xl font-bold">PhTube-Blogs</h1>
+            <div class="posts grid grid-cols-1 gap-5 lg:grid-cols-3 mt-10">
+                <div onclick="my_modal_1.showModal()"
+                    class="h-32 w-96 bg-slate-900 bg-opacity-90 hover:bg-opacity-100 rounded-lg shadow-lg flex justify-center items-center gap-3 p-4">
+                    <div class=" ">
+                        <img class="h-24" src="/varLetConst2.png" alt="">
+                    </div>
+                    <div>
+                        <h2 class="text-lg text-white font-semibold ">What is Var, Let and Const?</h2>
+                        <p class="text-white opacity-80 underline">click to view the post</p>
+                    </div>
+
+                </div>
+                <div onclick="my_modal_2.showModal()"
+                    class="h-32 w-96 bg-slate-900 bg-opacity-90 hover:bg-opacity-100 rounded-lg shadow-lg flex justify-center items-center gap-3 p-4">
+                    <div class=" ">
+                        <img class="h-24" src="/NullorUndefined.png" alt="">
+                    </div>
+                    <div>
+                        <h2 class="text-lg text-white font-semibold "> Use cases of null and undefined</h2>
+                        <p class="text-white opacity-80 underline">click to view the post</p>
+                    </div>
+
+                </div>
+                <div onclick="my_modal_3.showModal()"
+                    class="h-32 w-96 bg-slate-900 bg-opacity-90 hover:bg-opacity-100 rounded-lg shadow-lg flex justify-center items-center gap-3 p-4 pr-20">
+                    <div class=" ">
+                        <img class="h-24" src="/rapi.png" alt="">
+                    </div>
+                    <div>
+                        <h2 class="text-lg text-white font-semibold ">What is rest API?</h2>
+                        <p class="text-white opacity-80 underline">click to view the post</p>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+        <!-- modals -->
+        <section>
+            <div class="modal_1">
+                <dialog id="my_modal_1" class="modal">
+                    <form method="dialog" class="modal-box">
+                        <h3 class="font-bold text-lg">What is Var, Let and Const?</h3>
+                        <img class="w-11/12 mx-auto my-4" src="/varLetConst.png" alt="">
+                        <p class="text-justify text-base">var, let, and const are JavaScript keywords used for declaring variables, each with distinct
+                            behavior. var is function-scoped and hoisted, making it accessible throughout a function.
+                            let is block-scoped, offering better control over variable scope and preventing
+                            hoisting-related issues. const is also block-scoped and prevents variable reassignment after
+                            initialization, ensuring the variable remains constant. The key difference is in their scope
+                            and mutability: var has a broader scope and is mutable, let has a narrower scope and is
+                            mutable, and const has a narrow scope and is immutable after initialization.</p>
+
+                        <div class="modal-action">
+                            <!-- if there is a button in form, it will close the modal -->
+                            <button class="btn">Close</button>
+                        </div>
+                    </form>
+                </dialog>
+            </div>
+            <div class="modal_2">
+                <dialog id="my_modal_2" class="modal">
+                    <form method="dialog" class="modal-box">
+                        <h3 class="font-bold text-lg">Use cases of null and undefined</h3>
+                        <img class="w-11/12 mx-auto my-4" src="/nullundefined2.png" alt="">
+                        <p class="text-justify text-base">In JavaScript, null and undefined are used to represent the absence of a value or uninitialized variables. undefined typically indicates a variable that has been declared but not assigned a value, while null is often used to explicitly indicate the absence of any object value. undefined can be considered a default initial state, while null is used to intentionally signify the absence of a value in a variable or object property. Both are essential for handling cases where a value may or may not exist, helping to avoid unexpected errors and allowing for more robust error handling and data validation in JavaScript code.</p>
+
+                        <div class="modal-action">
+                            <!-- if there is a button in form, it will close the modal -->
+                            <button class="btn">Close</button>
+                        </div>
+                    </form>
+                </dialog>
+            </div>
+            <div class="modal_3">
+                <dialog id="my_modal_3" class="modal">
+                    <form method="dialog" class="modal-box">
+                        <h3 class="font-bold text-lg">What is rest API?</h3>
+                        <img class="w-11/12 mx-auto my-4" src="/restapi2.png" alt="">
+                        <p class="text-justify text-base">
+                            REST API, which stands for Representational State Transfer Application Programming Interface, is a set of architectural principles and constraints used for designing networked applications. It defines a simple and standardized way for different software components to communicate over the internet or other networks. REST APIs rely on a client-server model, where the client makes requests to the server for resources, such as data or functionality, using standard HTTP methods like GET (retrieve data), POST (create data), PUT (update data), and DELETE (remove data). These APIs are stateless, meaning each request from the client to the server must contain all the information needed to understand and fulfill the request, making them highly scalable and flexible. REST APIs are widely used in web development to enable interactions between web services and client applications, providing a foundation for building distributed and interconnected systems.</p>
+
+                        <div class="modal-action">
+                            <!-- if there is a button in form, it will close the modal -->
+                            <button class="btn">Close</button>
+                        </div>
+                    </form>
+                </dialog>
+            </div>
+        </section>
+    </main>
+    <script>
+        // my_modal_1.showModal()
+    </script>
+</body>
+
+</html>
